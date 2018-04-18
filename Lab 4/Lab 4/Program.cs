@@ -21,7 +21,7 @@ namespace Lab_4
 
 
 
-            Console.WriteLine("This program has multiple functionalities");
+            Console.WriteLine("This program has multiple functionalities" );
             Console.WriteLine("A to convert miles to KM, B to convert inches to CM, C to convert lbs to kg");
             Console.WriteLine("D to convert KM to miles, E to convert CM to inches, F to convert kg to lbs");
             Console.WriteLine("Enter choice: ");
