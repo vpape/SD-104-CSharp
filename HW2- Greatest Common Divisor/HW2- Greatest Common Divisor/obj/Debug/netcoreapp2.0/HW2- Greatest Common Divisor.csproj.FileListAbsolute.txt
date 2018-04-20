@@ -1,0 +1,11 @@
+C:\Users\Student\source\repos\SD-104-CSharp\HW2- Greatest Common Divisor\HW2- Greatest Common Divisor\bin\Debug\netcoreapp2.0\HW2- Greatest Common Divisor.deps.json
+C:\Users\Student\source\repos\SD-104-CSharp\HW2- Greatest Common Divisor\HW2- Greatest Common Divisor\bin\Debug\netcoreapp2.0\HW2- Greatest Common Divisor.runtimeconfig.json
+C:\Users\Student\source\repos\SD-104-CSharp\HW2- Greatest Common Divisor\HW2- Greatest Common Divisor\bin\Debug\netcoreapp2.0\HW2- Greatest Common Divisor.runtimeconfig.dev.json
+C:\Users\Student\source\repos\SD-104-CSharp\HW2- Greatest Common Divisor\HW2- Greatest Common Divisor\bin\Debug\netcoreapp2.0\HW2- Greatest Common Divisor.dll
+C:\Users\Student\source\repos\SD-104-CSharp\HW2- Greatest Common Divisor\HW2- Greatest Common Divisor\bin\Debug\netcoreapp2.0\HW2- Greatest Common Divisor.pdb
+C:\Users\Student\source\repos\SD-104-CSharp\HW2- Greatest Common Divisor\HW2- Greatest Common Divisor\obj\Debug\netcoreapp2.0\HW2- Greatest Common Divisor.csprojResolveAssemblyReference.cache
+C:\Users\Student\source\repos\SD-104-CSharp\HW2- Greatest Common Divisor\HW2- Greatest Common Divisor\obj\Debug\netcoreapp2.0\HW2- Greatest Common Divisor.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\SD-104-CSharp\HW2- Greatest Common Divisor\HW2- Greatest Common Divisor\obj\Debug\netcoreapp2.0\HW2- Greatest Common Divisor.AssemblyInfoInputs.cache
+C:\Users\Student\source\repos\SD-104-CSharp\HW2- Greatest Common Divisor\HW2- Greatest Common Divisor\obj\Debug\netcoreapp2.0\HW2- Greatest Common Divisor.AssemblyInfo.cs
+C:\Users\Student\source\repos\SD-104-CSharp\HW2- Greatest Common Divisor\HW2- Greatest Common Divisor\obj\Debug\netcoreapp2.0\HW2- Greatest Common Divisor.dll
+C:\Users\Student\source\repos\SD-104-CSharp\HW2- Greatest Common Divisor\HW2- Greatest Common Divisor\obj\Debug\netcoreapp2.0\HW2- Greatest Common Divisor.pdb
