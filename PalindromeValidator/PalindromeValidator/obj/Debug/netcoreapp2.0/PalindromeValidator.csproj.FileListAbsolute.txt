@@ -1,0 +1,11 @@
+C:\Users\Student\source\repos\SD-104-CSharp\PalindromeValidator\PalindromeValidator\bin\Debug\netcoreapp2.0\PalindromeValidator.deps.json
+C:\Users\Student\source\repos\SD-104-CSharp\PalindromeValidator\PalindromeValidator\bin\Debug\netcoreapp2.0\PalindromeValidator.runtimeconfig.json
+C:\Users\Student\source\repos\SD-104-CSharp\PalindromeValidator\PalindromeValidator\bin\Debug\netcoreapp2.0\PalindromeValidator.runtimeconfig.dev.json
+C:\Users\Student\source\repos\SD-104-CSharp\PalindromeValidator\PalindromeValidator\bin\Debug\netcoreapp2.0\PalindromeValidator.dll
+C:\Users\Student\source\repos\SD-104-CSharp\PalindromeValidator\PalindromeValidator\bin\Debug\netcoreapp2.0\PalindromeValidator.pdb
+C:\Users\Student\source\repos\SD-104-CSharp\PalindromeValidator\PalindromeValidator\obj\Debug\netcoreapp2.0\PalindromeValidator.csprojResolveAssemblyReference.cache
+C:\Users\Student\source\repos\SD-104-CSharp\PalindromeValidator\PalindromeValidator\obj\Debug\netcoreapp2.0\PalindromeValidator.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\SD-104-CSharp\PalindromeValidator\PalindromeValidator\obj\Debug\netcoreapp2.0\PalindromeValidator.AssemblyInfoInputs.cache
+C:\Users\Student\source\repos\SD-104-CSharp\PalindromeValidator\PalindromeValidator\obj\Debug\netcoreapp2.0\PalindromeValidator.AssemblyInfo.cs
+C:\Users\Student\source\repos\SD-104-CSharp\PalindromeValidator\PalindromeValidator\obj\Debug\netcoreapp2.0\PalindromeValidator.dll
+C:\Users\Student\source\repos\SD-104-CSharp\PalindromeValidator\PalindromeValidator\obj\Debug\netcoreapp2.0\PalindromeValidator.pdb

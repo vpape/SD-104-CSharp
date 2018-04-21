@@ -1,0 +1,11 @@
+C:\Users\Student\source\repos\SD-104-CSharp\Lab - Reverse Array\Lab - Reverse Array\bin\Debug\netcoreapp2.0\Lab - Reverse Array.deps.json
+C:\Users\Student\source\repos\SD-104-CSharp\Lab - Reverse Array\Lab - Reverse Array\bin\Debug\netcoreapp2.0\Lab - Reverse Array.runtimeconfig.json
+C:\Users\Student\source\repos\SD-104-CSharp\Lab - Reverse Array\Lab - Reverse Array\bin\Debug\netcoreapp2.0\Lab - Reverse Array.runtimeconfig.dev.json
+C:\Users\Student\source\repos\SD-104-CSharp\Lab - Reverse Array\Lab - Reverse Array\bin\Debug\netcoreapp2.0\Lab - Reverse Array.dll
+C:\Users\Student\source\repos\SD-104-CSharp\Lab - Reverse Array\Lab - Reverse Array\bin\Debug\netcoreapp2.0\Lab - Reverse Array.pdb
+C:\Users\Student\source\repos\SD-104-CSharp\Lab - Reverse Array\Lab - Reverse Array\obj\Debug\netcoreapp2.0\Lab - Reverse Array.csprojResolveAssemblyReference.cache
+C:\Users\Student\source\repos\SD-104-CSharp\Lab - Reverse Array\Lab - Reverse Array\obj\Debug\netcoreapp2.0\Lab - Reverse Array.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\SD-104-CSharp\Lab - Reverse Array\Lab - Reverse Array\obj\Debug\netcoreapp2.0\Lab - Reverse Array.AssemblyInfoInputs.cache
+C:\Users\Student\source\repos\SD-104-CSharp\Lab - Reverse Array\Lab - Reverse Array\obj\Debug\netcoreapp2.0\Lab - Reverse Array.AssemblyInfo.cs
+C:\Users\Student\source\repos\SD-104-CSharp\Lab - Reverse Array\Lab - Reverse Array\obj\Debug\netcoreapp2.0\Lab - Reverse Array.dll
+C:\Users\Student\source\repos\SD-104-CSharp\Lab - Reverse Array\Lab - Reverse Array\obj\Debug\netcoreapp2.0\Lab - Reverse Array.pdb
