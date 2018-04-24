@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modulo Function", "Modulo Function\Modulo Function.csproj", "{7AE488D5-CB5B-421F-8019-026A75CD78BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7AE488D5-CB5B-421F-8019-026A75CD78BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AE488D5-CB5B-421F-8019-026A75CD78BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AE488D5-CB5B-421F-8019-026A75CD78BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AE488D5-CB5B-421F-8019-026A75CD78BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9FC21D18-D10E-4AF6-963F-0FC31E350BA5}
+	EndGlobalSection
+EndGlobal
