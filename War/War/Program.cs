@@ -26,6 +26,10 @@ namespace War
 
                     player1Card = theDeck.Draw();
                     player2Card = theDeck.Draw();
+
+                    Console.WriteLine("This is WAR!! ");
+                    Console.ReadLine();
+
                                         
 
                 }
@@ -57,6 +61,15 @@ namespace War
                 if (theDeck.theCards.Count == 0)
                 {
                     gameOver = true;
+                    Console.WriteLine("The War is Over!! ");
+                }
+
+                else if (player1points.Equals(player2points))
+                {
+                    Console.WriteLine("It's a tie!! ");
+                    Console.WriteLine("Player 1 Total Points: " + player1points);
+                    Console.WriteLine("Player 2 Total Points: " + player2points);
+                    Console.ReadLine();
                 }
             }
             //output the winner based on who has more points

@@ -41,6 +41,7 @@ namespace War
         //Draws a card and reduces the size of the deck
         public Card Draw()
         {
+
             Card card = theCards[theCards.Count - 1];
             theCards.RemoveAt(theCards.Count - 1);
             return card;
