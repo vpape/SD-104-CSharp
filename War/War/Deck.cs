@@ -13,9 +13,9 @@ namespace War
         public Deck()
         {
             theCards = new List<Card>();
-            for (int count = 0; count <= 4; count++)
+            for (int count = 1; count <= 4; count++)
             {
-                for (int count2 = 0; count2 <= 13; count2++)
+                for (int count2 = 1; count2 <= 13; count2++)
                 {
                     Card card = new Card(count2, count);
                     theCards.Add(card);
