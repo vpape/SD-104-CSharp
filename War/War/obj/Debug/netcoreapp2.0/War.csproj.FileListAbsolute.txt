@@ -1,0 +1,11 @@
+C:\Users\Student\source\repos\SD-104-CSharp\War\War\bin\Debug\netcoreapp2.0\War.deps.json
+C:\Users\Student\source\repos\SD-104-CSharp\War\War\bin\Debug\netcoreapp2.0\War.runtimeconfig.json
+C:\Users\Student\source\repos\SD-104-CSharp\War\War\bin\Debug\netcoreapp2.0\War.runtimeconfig.dev.json
+C:\Users\Student\source\repos\SD-104-CSharp\War\War\bin\Debug\netcoreapp2.0\War.dll
+C:\Users\Student\source\repos\SD-104-CSharp\War\War\bin\Debug\netcoreapp2.0\War.pdb
+C:\Users\Student\source\repos\SD-104-CSharp\War\War\obj\Debug\netcoreapp2.0\War.csprojResolveAssemblyReference.cache
+C:\Users\Student\source\repos\SD-104-CSharp\War\War\obj\Debug\netcoreapp2.0\War.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\SD-104-CSharp\War\War\obj\Debug\netcoreapp2.0\War.AssemblyInfoInputs.cache
+C:\Users\Student\source\repos\SD-104-CSharp\War\War\obj\Debug\netcoreapp2.0\War.AssemblyInfo.cs
+C:\Users\Student\source\repos\SD-104-CSharp\War\War\obj\Debug\netcoreapp2.0\War.dll
+C:\Users\Student\source\repos\SD-104-CSharp\War\War\obj\Debug\netcoreapp2.0\War.pdb
