@@ -10,7 +10,10 @@ namespace War
             int player1points = 0;
             int player2points = 0;
             bool gameOver = false;
+            Console.WriteLine("Card at position 0: " + theDeck.theCards[0].ToString());
             theDeck.Shuffle();
+            Console.WriteLine("Deck has been shuffled. Card at position 0: " + theDeck.theCards[0].ToString());
+            Console.ReadLine();
 
             while (gameOver == false)
             {
