@@ -22,14 +22,14 @@ namespace HW1
             //kg to lbs: 2.2 * kg - f
 
 
-            
+            while (true) { 
 
             Console.WriteLine("This program has multiple functionalities" );
             Console.WriteLine("A to convert miles to KM, B to convert inches to CM, C to convert lbs to kg");
             Console.WriteLine("D to convert KM to miles, E to convert CM to inches, F to convert kg to lbs");
             Console.Write("Enter choice: ");
             choice = Console.ReadLine();
-
+            
 
             switch (choice.ToUpper())
             {
@@ -103,5 +103,6 @@ namespace HW1
             }
                 Console.ReadLine();
         }
+    }
     }
 }
