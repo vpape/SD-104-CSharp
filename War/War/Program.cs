@@ -20,14 +20,15 @@ namespace War
                 Card player2Card = theDeck.Draw(); //output player2Card using card.ToString
 
 
-                while (player1Card.isEqual(player2Card))
+                while (player1Card == player2Card)
                 {
+
+                    Console.WriteLine("This is WAR!! ");
+
                     warPoints += 2;
 
                     player1Card = theDeck.Draw();
-                    player2Card = theDeck.Draw();
-
-                    Console.WriteLine("This is WAR!! ");
+                    player2Card = theDeck.Draw();                    
                     Console.ReadLine();
 
                                         
@@ -35,7 +36,7 @@ namespace War
                 }
 
                 //compare the two cards
-                if (player1Card.GreaterThan(player2Card))
+                if (player1Card > player2Card)
                 {
                     //player1Card wins and gets two points;
                     warPoints += 2;
@@ -48,7 +49,7 @@ namespace War
 
                 }
                 
-                else if (player2Card.GreaterThan(player1Card))
+                else if (player2Card > player1Card)
                 {
                     //player2Card wins and gets two points;
                     warPoints += 2;
@@ -64,9 +65,9 @@ namespace War
                     Console.WriteLine("The War is Over!! ");
                 }
 
-                else if (player1points.Equals(player2points))
+                else if (player1points == player2points)
                 {
-                    Console.WriteLine("It's a tie!! ");
+                    Console.WriteLine("It's a tie at this point!! ");
                     Console.WriteLine("Player 1 Total Points: " + player1points);
                     Console.WriteLine("Player 2 Total Points: " + player2points);
                     Console.ReadLine();

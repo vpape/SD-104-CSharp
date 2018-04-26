@@ -21,6 +21,58 @@ namespace War
             this.suit = suit;
         }
 
+        public static bool operator < (Card theCard1, Card theCard2)
+        {
+            if (theCard1.value < theCard2.value)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+                
+        }
+
+        
+        public static bool operator >(Card theCard1, Card theCard2)
+        {
+            if (theCard1.value > theCard2.value)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        public static bool operator ==(Card theCard1, Card theCard2)
+        {
+            if (theCard1.value == theCard2.value)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static bool operator !=(Card theCard1, Card theCard2)
+        {
+            if (theCard1.value != theCard2.value)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
         public bool GreaterThan(Card card)
         {
             if (this.value > card.value)
