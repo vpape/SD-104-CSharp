@@ -1,0 +1,11 @@
+C:\Users\Student\source\repos\SD-104-CSharp\ExamReview\ExamReview\bin\Debug\netcoreapp2.0\ExamReview.deps.json
+C:\Users\Student\source\repos\SD-104-CSharp\ExamReview\ExamReview\bin\Debug\netcoreapp2.0\ExamReview.runtimeconfig.json
+C:\Users\Student\source\repos\SD-104-CSharp\ExamReview\ExamReview\bin\Debug\netcoreapp2.0\ExamReview.runtimeconfig.dev.json
+C:\Users\Student\source\repos\SD-104-CSharp\ExamReview\ExamReview\bin\Debug\netcoreapp2.0\ExamReview.dll
+C:\Users\Student\source\repos\SD-104-CSharp\ExamReview\ExamReview\bin\Debug\netcoreapp2.0\ExamReview.pdb
+C:\Users\Student\source\repos\SD-104-CSharp\ExamReview\ExamReview\obj\Debug\netcoreapp2.0\ExamReview.csprojResolveAssemblyReference.cache
+C:\Users\Student\source\repos\SD-104-CSharp\ExamReview\ExamReview\obj\Debug\netcoreapp2.0\ExamReview.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\SD-104-CSharp\ExamReview\ExamReview\obj\Debug\netcoreapp2.0\ExamReview.AssemblyInfoInputs.cache
+C:\Users\Student\source\repos\SD-104-CSharp\ExamReview\ExamReview\obj\Debug\netcoreapp2.0\ExamReview.AssemblyInfo.cs
+C:\Users\Student\source\repos\SD-104-CSharp\ExamReview\ExamReview\obj\Debug\netcoreapp2.0\ExamReview.dll
+C:\Users\Student\source\repos\SD-104-CSharp\ExamReview\ExamReview\obj\Debug\netcoreapp2.0\ExamReview.pdb
