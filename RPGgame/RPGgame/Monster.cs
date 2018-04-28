@@ -46,6 +46,7 @@ namespace RPGgame
         public void Attack(Hero Zelda1)
         {
             Zelda1.Herohealth -= this.AttackPower;
+
         }
 
      

@@ -40,6 +40,7 @@ namespace RPGgame
         public void Attack(Monster Sasquatch1)
         {
             Sasquatch1.Monsterhealth -= this.AttackPower;
+
         }
 
        
@@ -54,6 +55,7 @@ namespace RPGgame
                 AttackPower += timesToLevel * 5;
                 Herohealth += 3 * level;
                 this.CurrentExp -= timesToLevel * 40;
+                Console.ReadLine();
             }
         }
     }
