@@ -1,0 +1,11 @@
+C:\Users\Student\source\repos\SD-104-CSharp\RPGgame\RPGgame\bin\Debug\netcoreapp2.0\RPGgame.deps.json
+C:\Users\Student\source\repos\SD-104-CSharp\RPGgame\RPGgame\bin\Debug\netcoreapp2.0\RPGgame.runtimeconfig.json
+C:\Users\Student\source\repos\SD-104-CSharp\RPGgame\RPGgame\bin\Debug\netcoreapp2.0\RPGgame.runtimeconfig.dev.json
+C:\Users\Student\source\repos\SD-104-CSharp\RPGgame\RPGgame\bin\Debug\netcoreapp2.0\RPGgame.dll
+C:\Users\Student\source\repos\SD-104-CSharp\RPGgame\RPGgame\bin\Debug\netcoreapp2.0\RPGgame.pdb
+C:\Users\Student\source\repos\SD-104-CSharp\RPGgame\RPGgame\obj\Debug\netcoreapp2.0\RPGgame.csprojResolveAssemblyReference.cache
+C:\Users\Student\source\repos\SD-104-CSharp\RPGgame\RPGgame\obj\Debug\netcoreapp2.0\RPGgame.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\SD-104-CSharp\RPGgame\RPGgame\obj\Debug\netcoreapp2.0\RPGgame.AssemblyInfoInputs.cache
+C:\Users\Student\source\repos\SD-104-CSharp\RPGgame\RPGgame\obj\Debug\netcoreapp2.0\RPGgame.AssemblyInfo.cs
+C:\Users\Student\source\repos\SD-104-CSharp\RPGgame\RPGgame\obj\Debug\netcoreapp2.0\RPGgame.dll
+C:\Users\Student\source\repos\SD-104-CSharp\RPGgame\RPGgame\obj\Debug\netcoreapp2.0\RPGgame.pdb
