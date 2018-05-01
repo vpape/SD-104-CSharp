@@ -1,0 +1,11 @@
+C:\Users\Student\source\repos\SD-104-CSharp\HandsOn\HandsOn\obj\Debug\netcoreapp2.0\HandsOn.csprojResolveAssemblyReference.cache
+C:\Users\Student\source\repos\SD-104-CSharp\HandsOn\HandsOn\obj\Debug\netcoreapp2.0\HandsOn.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\SD-104-CSharp\HandsOn\HandsOn\obj\Debug\netcoreapp2.0\HandsOn.AssemblyInfoInputs.cache
+C:\Users\Student\source\repos\SD-104-CSharp\HandsOn\HandsOn\obj\Debug\netcoreapp2.0\HandsOn.AssemblyInfo.cs
+C:\Users\Student\source\repos\SD-104-CSharp\HandsOn\HandsOn\bin\Debug\netcoreapp2.0\HandsOn.deps.json
+C:\Users\Student\source\repos\SD-104-CSharp\HandsOn\HandsOn\bin\Debug\netcoreapp2.0\HandsOn.runtimeconfig.json
+C:\Users\Student\source\repos\SD-104-CSharp\HandsOn\HandsOn\bin\Debug\netcoreapp2.0\HandsOn.runtimeconfig.dev.json
+C:\Users\Student\source\repos\SD-104-CSharp\HandsOn\HandsOn\bin\Debug\netcoreapp2.0\HandsOn.dll
+C:\Users\Student\source\repos\SD-104-CSharp\HandsOn\HandsOn\bin\Debug\netcoreapp2.0\HandsOn.pdb
+C:\Users\Student\source\repos\SD-104-CSharp\HandsOn\HandsOn\obj\Debug\netcoreapp2.0\HandsOn.dll
+C:\Users\Student\source\repos\SD-104-CSharp\HandsOn\HandsOn\obj\Debug\netcoreapp2.0\HandsOn.pdb
