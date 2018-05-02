@@ -13,12 +13,11 @@ namespace RPGgame
             
 
             Hero Zelda = new Hero();
-            Goblin monster = new Goblin(CurrentLevel);            
-            Console.WriteLine("Monster {0} - (LV{1}) appears.",monster.name, monster.level);
+            Monster monster = new Goblin(CurrentLevel);
+            
+            Console.WriteLine("Monster {0} - (LV{1}) appears.", monster.name, monster.level);
             Random random = new Random();
             
-
-
 
             while (Zelda.isDead() != true)
             {
@@ -28,20 +27,28 @@ namespace RPGgame
 
                 if (monster.isDead() == true)
                 {
-
+                    
                     Zelda.CurrentExp += 20;
                     Console.WriteLine("Monster is Dead!");
                     Zelda.LevelUp();
                     CurrentLevel++;
-                    int randomNum = random.Next(1, 3);
+                    int randomNum = random.Next(1, 7);
+
                     if (randomNum == 1)
                         monster = new Goblin(CurrentLevel);
-                    else
+                    if (randomNum == 2)
                         monster = new SpearGoblin(CurrentLevel);
-                    Console.ReadLine();
+                    if (randomNum == 3)
+                        monster = new Skeleton(CurrentLevel);
+                    if (randomNum == 4)
+                        monster = new Zombie(CurrentLevel);
+                    if (randomNum == 5)
+                        monster = new ZombieArcher(CurrentLevel);
+                    if (randomNum == 6)
+                        monster = new HoodedGoblin(CurrentLevel);
+                                      
 
-
-                    monster = new Goblin(CurrentLevel);
+                                        
                     Console.WriteLine("Monster {0} - (LV{1}) appears.", monster.name, monster.level);
                     Console.ReadLine();
 
@@ -59,8 +66,7 @@ namespace RPGgame
                     Console.WriteLine("Hero Health: " + Zelda.Herohealth);
                     
                 }
-                
-                                  
+                                                 
                 
             }
             Console.WriteLine("Hero is Dead");

@@ -37,9 +37,9 @@ namespace RPGgame
       
 
 
-        public void Attack(Monster Sasquatch1)
+        public void Attack(Monster monster)
         {
-            Sasquatch1.Monsterhealth -= this.AttackPower;
+            monster.Monsterhealth -= this.AttackPower;
 
         }
 

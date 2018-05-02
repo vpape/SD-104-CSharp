@@ -4,17 +4,15 @@ using System.Text;
 
 namespace RPGgame
 {
-    class SpearGoblin: Goblin
+    class ZombieArcher: Zombie
     {
-        public SpearGoblin()
+
+       
+
+        public ZombieArcher(int level)
         {
 
-        }
-
-        public SpearGoblin(int level)
-        {
-
-            name = "Spear Goblin";
+            name = "ZombieArcher";
             range = level * 1;
             if (level == 1)
             {

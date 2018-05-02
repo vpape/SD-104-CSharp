@@ -4,18 +4,17 @@ using System.Text;
 
 namespace RPGgame
 {
-    class SpearGoblin: Goblin
+    class Zombie: Monster
     {
-        public SpearGoblin()
+        public Zombie()
         {
 
         }
 
-        public SpearGoblin(int level)
+        public Zombie(int level)
         {
 
-            name = "Spear Goblin";
-            range = level * 1;
+            name = "Zombie";            
             if (level == 1)
             {
                 AttackPower = 1;
@@ -33,7 +32,7 @@ namespace RPGgame
 
         public override void Attack(Hero Zelda1)
         {
-            Zelda1.Herohealth -= AttackPower + range;
+            Zelda1.Herohealth -= AttackPower;
         }
 
 
