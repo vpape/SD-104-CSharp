@@ -41,8 +41,8 @@ namespace HandsOn
 
 
             Console.WriteLine("Maximum: " + FindMax(array1));
-            Console.WriteLine();
             Console.WriteLine("Maximum2: " + FindMax(array2));
+            Console.WriteLine();
 
             float[] avg1 = { 1, 2, 3, 4, 5, 6, 8, 10 };
             Console.WriteLine("Avg: " + FindAvg(avg1));
@@ -89,27 +89,29 @@ namespace HandsOn
 
             if (name.Contains("test"))
             {
-                Console.WriteLine("String contains test- " + name + ": " + name.Substring(8, 11));
+                Console.WriteLine("String contains test- " + name + ": ");
             }
             else
             {
                 Console.WriteLine("String does not contain test in it ");
             }
 
-            if (name.Length > 12)
-            {
-                Console.WriteLine("String is longer than 12 characters: " + name);
-            }
-            else if (name.Length == 12)
+                if (name.Length > 12)
+                {
+                    Console.WriteLine("String is longer than 12 characters: " + name);
+                }
+                else if (name.Length == 12)
 
-            {
-                Console.WriteLine("String is equal to 12: " + name.Length);
+                {
+                    Console.WriteLine("String is equal to 12: " + name.Length);
+                }
+
             }
 
         }
-                       
     }
-}
+
+
 
 
 

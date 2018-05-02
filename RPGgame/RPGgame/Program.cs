@@ -13,34 +13,42 @@ namespace RPGgame
             
 
             Hero Zelda = new Hero();
-            Monster Sasquatch = new Monster(CurrentLevel);
+            Goblin monster = new Goblin(CurrentLevel);            
+            Console.WriteLine("Monster {0} - (LV{1}) appears.",monster.name, monster.level);
+            Random random = new Random();
+            
 
 
 
             while (Zelda.isDead() != true)
             {
-                Zelda.Attack(Sasquatch);
+                Zelda.Attack(monster);
                 Console.WriteLine("Hero attacks Monster!!");
                 Console.ReadLine();
 
-                if (Sasquatch.isDead() == true)
+                if (monster.isDead() == true)
                 {
 
                     Zelda.CurrentExp += 20;
                     Console.WriteLine("Monster is Dead!");
                     Zelda.LevelUp();
                     CurrentLevel++;
+                    int randomNum = random.Next(1, 3);
+                    if (randomNum == 1)
+                        monster = new Goblin(CurrentLevel);
+                    else
+                        monster = new SpearGoblin(CurrentLevel);
                     Console.ReadLine();
 
 
-                    Sasquatch = new Monster(CurrentLevel);
-                    Console.WriteLine("A new monster (LV " + Sasquatch.level + ") appears");
+                    monster = new Goblin(CurrentLevel);
+                    Console.WriteLine("Monster {0} - (LV{1}) appears.", monster.name, monster.level);
                     Console.ReadLine();
 
                 }
                 else
                 {
-                    Sasquatch.Attack(Zelda);
+                    monster.Attack(Zelda);
                     Console.WriteLine("Monster Attacks Hero");
                     Console.ReadLine();
                 }

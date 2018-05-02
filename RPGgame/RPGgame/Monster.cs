@@ -4,30 +4,17 @@ using System.Text;
 
 namespace RPGgame
 {
-    class Monster
+    abstract class Monster
     {
         public int level;
         public int Monsterhealth;
         public int AttackPower;
-        public int CurrentExp;
-
-        public Monster(int level)
-        {
-            if (level == 1)
-            {
-                AttackPower = 1;
-
-            }
-            else
-            {
-                AttackPower = level * 2;
-
-            }
-            Monsterhealth = 2 * level;
-            this.level = level;
+        public int range;
+        public string name;
 
 
-        }
+        public abstract void Attack(Hero Zelda1);
+       
 
         public bool isDead()
         {
@@ -43,11 +30,7 @@ namespace RPGgame
 
        
 
-        public void Attack(Hero Zelda1)
-        {
-            Zelda1.Herohealth -= this.AttackPower;
-
-        }
+      
 
      
         
