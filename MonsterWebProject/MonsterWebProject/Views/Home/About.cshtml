@@ -1,0 +1,28 @@
+﻿@model List<RPGgame.Monster>
+
+<html>
+    <body>
+       <table>
+        <tr>
+            <th>Monster Name:</th>
+            <th>Level:</th>
+            <th>Health:</th>
+            <th>Attack Power:</th>
+            <th>Range:</th>
+        </tr>
+        
+            @foreach (RPGgame.Monster monster in (dynamic)Model)
+            {
+                <tr>
+                    <td>@monster.name</td>
+                    <td>@monster.level</td>
+                    <td>@monster.Monsterhealth</td>
+                    <td>@monster.AttackPower</td>
+                    <td>@monster.range</td>
+                </tr>
+            }
+
+        </table>
+    </body>
+</html>
+        <p>Use this area to provide additional information.</p>
