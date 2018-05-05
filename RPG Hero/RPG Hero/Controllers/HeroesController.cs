@@ -23,17 +23,16 @@ namespace RPG_Hero.Controllers
         // GET: Heroes/Details/5
         public ActionResult Details(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Hero hero = context.Find(id);
-            if (hero == null)
-            {
-                return HttpNotFound();
-            }
+            
+            RPG_HeroContext context = new RPG_HeroContext();
+            Hero hero = context.GetHeroById(id);            
             return View(hero);
+
+            /*Hero hero = context.GetHeroById(id);
+            return View(hero);*/
         }
+
+
 
         // GET: Heroes/Create
         public ActionResult Create()
@@ -61,16 +60,8 @@ namespace RPG_Hero.Controllers
         // GET: Heroes/Edit/5
         public ActionResult Edit(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Hero hero = context.Find(id);
-            if (hero == null)
-            {
-                return HttpNotFound();
-            }
-            return View(hero);
+           
+            return View();
         }
 
         // POST: Heroes/Edit/5
@@ -80,28 +71,22 @@ namespace RPG_Hero.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,Lvl,Health,AttackPower,CurrentExp")] Hero hero)
         {
-            if (ModelState.IsValid)
-            {
-                context.Entry(hero).State = EntityState.Modified;
-                context.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(hero);
+            hero.Health = Int32.Parse(Request.Form["Health"].ToString());
+
+            RPG_HeroContext context = new RPG_HeroContext();
+            context.EditById(hero);
+            return RedirectToAction("Index");                 
+            
         }
 
         // GET: Heroes/Delete/5
         public ActionResult Delete(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Hero hero = context.Find(id);
-            if (hero == null)
-            {
-                return HttpNotFound();
-            }
+            RPG_HeroContext context = new RPG_HeroContext();
+            Hero hero = context.GetHeroById(id);
             return View(hero);
+
+            
         }
 
         // POST: Heroes/Delete/5
@@ -109,19 +94,12 @@ namespace RPG_Hero.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Hero hero = context.Find(id);
-            context.Remove(id);
-            context.SaveChanges();
+            
+            RPG_HeroContext context = new RPG_HeroContext();            
+            context.Delete(id);            
             return RedirectToAction("Index");
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                context.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+      
     }
 }

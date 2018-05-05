@@ -21,24 +21,122 @@ public class RPG_HeroContext : DbContext
 
     }
 
+    public void EditById(Hero hero)
+    {
+        string ConnectionString = "Server = localhost ; Database = RPGGame; Trusted_Connection = True";
+        using (SqlConnection conn = new SqlConnection(ConnectionString))
+        {
+
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("Update hero SET health = @Health, Lvl = @Lvl, currentExp = @CurrentExp, AttackPower = @AttackPower where id = @Id", conn);
+            cmd.Parameters.Add(new SqlParameter
+            {
+                ParameterName = "@Health",
+                DbType = DbType.Int32,
+                Value = hero.Health,
+
+            });
+            cmd.Parameters.Add(new SqlParameter
+            {
+                ParameterName = "@Lvl",
+                DbType = DbType.Int32,
+                Value = hero.Lvl,
+
+            });
+            cmd.Parameters.Add(new SqlParameter
+            {
+                ParameterName = "@CurrentExp",
+                DbType = DbType.Int32,
+                Value = hero.CurrentExp,
+
+            });
+            cmd.Parameters.Add(new SqlParameter
+            {
+                ParameterName = "@AttackPower",
+                DbType = DbType.Int32,
+                Value = hero.AttackPower,
+
+            });
+            cmd.Parameters.Add(new SqlParameter
+            {
+                ParameterName = "@Id",
+                DbType = DbType.Int32,
+                Value = hero.Id,
+
+            });
+            cmd.ExecuteNonQuery();
+        }
+    }
+
+    public void Delete(int id)
+    {
+        string ConnectionString = "Server = localhost ; Database = RPGGame; Trusted_Connection = True";
+        using (SqlConnection connection = new SqlConnection(ConnectionString))
+        { 
+            connection.Open();
+            SqlCommand cmd = new SqlCommand("delete from hero where id = @id", connection);
+            cmd.Parameters.Add(new SqlParameter
+            {
+                ParameterName = "@id",
+                DbType = DbType.Int32,
+                Value = id,
+            });
+            cmd.ExecuteNonQuery();                 
+
+        }
+    }
+
+    public Hero GetHeroById(int id)
+    {
+        string ConnectionString = "Server = localhost ; Database = RPGGame; Trusted_Connection = True";
+        using (SqlConnection connection = new SqlConnection(ConnectionString))
+        {
+            connection.Open();
+            SqlCommand cmd = new SqlCommand("select * from hero where id= @id", connection);          
+
+            cmd.Parameters.Add(new SqlParameter
+            {
+                ParameterName = "@id",
+                DbType = DbType.Int32,
+                Value = id,
+            });
+
+            Hero hero = new Hero();
+            SqlDataReader dataReader = cmd.ExecuteReader();
+            while (dataReader.Read())
+            {
+
+                hero.Id = (int)dataReader["Id"];
+                hero.Health = (int)dataReader["Health"];
+                hero.Lvl = (int)dataReader["Lvl"];
+                hero.AttackPower = (int)dataReader["AttackPower"];
+                hero.CurrentExp = (int)dataReader["CurrentExp"];
+
+            }
+                return (hero);
+        }
+    }
+
     public List<Hero> ToList()
     {
         string ConnectionString = "Server = localhost ; Database = RPGGame; Trusted_Connection = True";
-
         using (SqlConnection connection = new SqlConnection(ConnectionString))
         {
             List<Hero> heroes = new List<Hero>();
 
             connection.Open();
             SqlCommand cmd = new SqlCommand("select * from hero", connection);
-            SqlDataReader Reader = cmd.ExecuteReader();
-            while (Reader.Read())
+            SqlDataReader dataReader = cmd.ExecuteReader();
+
+            while (dataReader.Read())
             {
                 Hero hero = new Hero();
-                hero.Health = (int) Reader["Health"];
-                hero.Lvl = (int)Reader["Lvl"];
-                hero.AttackPower = (int)Reader["AttackPower"];
-                hero.CurrentExp = (int)Reader["CurrentExp"];
+                hero.Id = (int)dataReader["Id"];
+                hero.Health = (int)dataReader["Health"];
+                hero.Lvl = (int)dataReader["Lvl"];
+                hero.AttackPower = (int)dataReader["AttackPower"];
+                hero.CurrentExp = (int)dataReader["CurrentExp"];
+
                 heroes.Add(hero);
             }
             return (heroes);
@@ -50,10 +148,7 @@ public class RPG_HeroContext : DbContext
         return null;
     }
 
-    public void Remove(int id)
-    {
-
-    }
+   
 
     public void Add(Hero hero)
     {
@@ -91,5 +186,24 @@ public class RPG_HeroContext : DbContext
             cmd.ExecuteNonQuery();
         }
     }
+    /*Update Hero
+     Set health = @health,
+     lvl = @lvl,
+     currentexp = @currentexp,
+     attack = @attack
+     where id = @id;
+     cmd.Addparameters({
+     ParameterName - @health
+     Dbtype = Dbtype.Int32,
+     value = hero.health)}*/
+
+    /*Delete from Hero
+     where id = 1;
+     C# 
+     Delete from here where id = @id
+     cmd.addparameter({
+     Parameter name = @id,
+     Dbtype = Dbtype.int32,
+     value = id*/
 
 }
