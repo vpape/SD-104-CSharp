@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RPGGameModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Hero">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Health" Type="int" Nullable="false" />
+          <Property Name="Lvl" Type="int" Nullable="false" />
+          <Property Name="AttackPower" Type="int" Nullable="false" />
+          <Property Name="CurrentExp" Type="int" />
+          <Property Name="Name" Type="varchar" MaxLength="250" />
+          <Property Name="Alive" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="Monster">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Health" Type="int" />
+          <Property Name="Lvl" Type="int" />
+          <Property Name="AttackPower" Type="int" />
+          <Property Name="Name" Type="varchar" MaxLength="250" />
+          <Property Name="Alive" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="Weapons">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="250" />
+          <Property Name="AttackValue" Type="int" />
+          <Property Name="Hands" Type="tinyint" />
+        </EntityType>
+        <EntityContainer Name="RPGGameModelStoreContainer">
+          <EntitySet Name="Hero" EntityType="Self.Hero" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Monster" EntityType="Self.Monster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Weapons" EntityType="Self.Weapons" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RPGGameModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Hero">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Health" Type="Int32" Nullable="false" />
+          <Property Name="Lvl" Type="Int32" Nullable="false" />
+          <Property Name="AttackPower" Type="Int32" Nullable="false" />
+          <Property Name="CurrentExp" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Alive" Type="Byte" />
+        </EntityType>
+        <EntityContainer Name="RPGGameEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Heroes" EntityType="Self.Hero" />
+          <EntitySet Name="Weapons" EntityType="RPGGameModel.Weapon" />
+          <EntitySet Name="Monsters" EntityType="RPGGameModel.Monster" />
+        </EntityContainer>
+        <EntityType Name="Weapon">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="AttackValue" Type="Int32" />
+          <Property Name="Hands" Type="Byte" />
+        </EntityType>
+        <EntityType Name="Monster">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Health" Type="Int32" />
+          <Property Name="Lvl" Type="Int32" />
+          <Property Name="AttackPower" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Alive" Type="Byte" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RPGGameModelStoreContainer" CdmEntityContainer="RPGGameEntities">
+          <EntitySetMapping Name="Heroes">
+            <EntityTypeMapping TypeName="RPGGameModel.Hero">
+              <MappingFragment StoreEntitySet="Hero">
+                <ScalarProperty Name="Alive" ColumnName="Alive" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Health" ColumnName="Health" />
+                <ScalarProperty Name="Lvl" ColumnName="Lvl" />
+                <ScalarProperty Name="AttackPower" ColumnName="AttackPower" />
+                <ScalarProperty Name="CurrentExp" ColumnName="CurrentExp" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Weapons">
+            <EntityTypeMapping TypeName="RPGGameModel.Weapon">
+              <MappingFragment StoreEntitySet="Weapons">
+                <ScalarProperty Name="Hands" ColumnName="Hands" />
+                <ScalarProperty Name="AttackValue" ColumnName="AttackValue" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Monsters">
+            <EntityTypeMapping TypeName="RPGGameModel.Monster">
+              <MappingFragment StoreEntitySet="Monster">
+                <ScalarProperty Name="Alive" ColumnName="Alive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="AttackPower" ColumnName="AttackPower" />
+                <ScalarProperty Name="Lvl" ColumnName="Lvl" />
+                <ScalarProperty Name="Health" ColumnName="Health" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

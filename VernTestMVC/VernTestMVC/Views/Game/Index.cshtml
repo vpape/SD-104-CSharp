@@ -1,0 +1,78 @@
+﻿
+<hr />
+Enter Name: <input type="text" name=" HeroName" id=" HeroName" /><br/>
+
+<p>
+
+</p>
+
+<button onclick ="StartGame();">Start Game</button>
+<hr />
+<table>
+    <tr>
+        <td>Name:</td>                  
+        <td id="Name"></td>
+    </tr>
+    <tr>
+        <td>Health:</td>
+        <td id="Health"></td>
+    </tr>
+    <tr>
+        <td>Lvl:</td>
+        <td id="Lvl"></td>
+    </tr>
+    <tr>
+        <td>Attack Power:</td>
+        <td id="AttackPower"></td>
+    </tr>
+    <tr>
+        <td>Current Exp:</td>
+        <td id="CurrentExp"></td>
+    </tr>
+</table>
+<script>
+
+    function SetHeroValues(data) {
+        document.getElementById("Name").innerHTML = data.Name;
+        document.getElementById("Health").innerHTML = data.Health;
+        document.getElementById("Lvl").innerHTML = data.Lvl;
+        document.getElementById("AttackPower").innerHTML = data.AttackPower;
+        document.getElementById("CurrentExp").innerHTML = data.CurrentExp;
+    }
+
+    function LevelUp() {
+        HeroName = document.getElementById("Name").innerHTML;        
+
+        postData('LevelUp', { Name: HeroName.value })
+            .then(data => alert(data))
+            .catch(error => console.error(error))
+    }
+
+    function StartGame(){
+        HeroName = document.getElementById("HeroName");       
+
+        postData('Game\StartGame', { Name: HeroName })
+            .then(data => alert(data))
+            .catch(error => console.error(error))
+
+        function postData(url, data) {
+            // Default options are marked with *
+            return fetch(url, {
+                body: JSON.stringify(data), // must match 'Content-Type' header
+                cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+                credentials: 'same-origin', // include, same-origin, *omit
+                headers: {
+                    'user-agent': 'Mozilla/4.0 MDN Example',
+                    'content-type': 'application/json'
+                },
+                method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                mode: 'cors', // no-cors, cors, *same-origin
+                redirect: 'follow', // manual, *follow, error
+                referrer: 'no-referrer', // *client, no-referrer
+            })
+                .then(response => response.json()) // parses response to JSON
+        }
+    }
+
+    //order: 1-DB table, 2-EF Update and add entities, 3-create controller, 4-extend partial classes, 5- create controller, 6-UserInterface (JS + HTML)
+</script>

@@ -1,0 +1,11 @@
+C:\Users\Student\source\repos\SD-104-CSharp\Calculator\Calculator\bin\Debug\netcoreapp2.0\Calculator.deps.json
+C:\Users\Student\source\repos\SD-104-CSharp\Calculator\Calculator\bin\Debug\netcoreapp2.0\Calculator.runtimeconfig.json
+C:\Users\Student\source\repos\SD-104-CSharp\Calculator\Calculator\bin\Debug\netcoreapp2.0\Calculator.runtimeconfig.dev.json
+C:\Users\Student\source\repos\SD-104-CSharp\Calculator\Calculator\bin\Debug\netcoreapp2.0\Calculator.dll
+C:\Users\Student\source\repos\SD-104-CSharp\Calculator\Calculator\bin\Debug\netcoreapp2.0\Calculator.pdb
+C:\Users\Student\source\repos\SD-104-CSharp\Calculator\Calculator\obj\Debug\netcoreapp2.0\Calculator.csprojResolveAssemblyReference.cache
+C:\Users\Student\source\repos\SD-104-CSharp\Calculator\Calculator\obj\Debug\netcoreapp2.0\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\SD-104-CSharp\Calculator\Calculator\obj\Debug\netcoreapp2.0\Calculator.AssemblyInfoInputs.cache
+C:\Users\Student\source\repos\SD-104-CSharp\Calculator\Calculator\obj\Debug\netcoreapp2.0\Calculator.AssemblyInfo.cs
+C:\Users\Student\source\repos\SD-104-CSharp\Calculator\Calculator\obj\Debug\netcoreapp2.0\Calculator.dll
+C:\Users\Student\source\repos\SD-104-CSharp\Calculator\Calculator\obj\Debug\netcoreapp2.0\Calculator.pdb

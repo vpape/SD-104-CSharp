@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RPGGameModelStoreContainer" CdmEntityContainer="RPGGameEntities">
+    <EntitySetMapping Name="Heroes">
+      <EntityTypeMapping TypeName="RPGGameModel.Hero">
+        <MappingFragment StoreEntitySet="Hero">
+          <ScalarProperty Name="Alive" ColumnName="Alive" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Health" ColumnName="Health" />
+          <ScalarProperty Name="Lvl" ColumnName="Lvl" />
+          <ScalarProperty Name="AttackPower" ColumnName="AttackPower" />
+          <ScalarProperty Name="CurrentExp" ColumnName="CurrentExp" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Weapons">
+      <EntityTypeMapping TypeName="RPGGameModel.Weapon">
+        <MappingFragment StoreEntitySet="Weapons">
+          <ScalarProperty Name="Hands" ColumnName="Hands" />
+          <ScalarProperty Name="AttackValue" ColumnName="AttackValue" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

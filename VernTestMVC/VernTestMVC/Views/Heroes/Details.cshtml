@@ -1,0 +1,58 @@
+﻿@model VernTestMVC.Models.Hero
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Hero</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Health)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Health)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lvl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lvl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AttackPower)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AttackPower)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentExp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentExp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

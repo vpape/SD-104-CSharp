@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RPGGameModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Hero">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Health" Type="Int32" Nullable="false" />
+    <Property Name="Lvl" Type="Int32" Nullable="false" />
+    <Property Name="AttackPower" Type="Int32" Nullable="false" />
+    <Property Name="CurrentExp" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Alive" Type="Byte" />
+  </EntityType>
+  <EntityContainer Name="RPGGameEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Heroes" EntityType="Self.Hero" />
+    <EntitySet Name="Weapons" EntityType="RPGGameModel.Weapon" />
+  </EntityContainer>
+  <EntityType Name="Weapon">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="AttackValue" Type="Int32" />
+    <Property Name="Hands" Type="Byte" />
+  </EntityType>
+</Schema>
