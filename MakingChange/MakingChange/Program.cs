@@ -27,7 +27,7 @@ namespace MakingChange
 
         private static string MakingChange(int tendered, decimal price)
         {
-            int quarters, dimes, nickels, cents;
+            int quarters= 0, dimes = 0, nickels = 0, cents = 0;
             decimal change = tendered - price;
             
 
