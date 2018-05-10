@@ -6,6 +6,11 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
+            Calculator();
+            Console.ReadLine();
+        }
+        private static void Calculator()
+        { 
             double num1 = 0;
             double num2 = 0;    
 
