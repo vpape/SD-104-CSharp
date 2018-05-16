@@ -1,0 +1,63 @@
+﻿@model IEnumerable<VernTestMVC.Models.Monster>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Health)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lvl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AttackPower)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Alive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Weapon.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Health)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lvl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AttackPower)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Alive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Weapon.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

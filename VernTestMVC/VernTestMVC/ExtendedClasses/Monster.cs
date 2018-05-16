@@ -1,24 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace VernTestMVC.Model
+namespace VernTestMVC.Models
 {
-    public class Monster
+    public partial class  Monster
     {
-        public void LevelUp()
-        {
-            this.Lvl += 1;
-            this.Health += 20;
 
-        }
+
+        //public int id { get; set; }
+        //public Nullable<int> Health { get; set; }
+        //public Nullable<int> Lvl { get; set; }
+        //public Nullable<int> AttackPower { get; set; }
+        //public string Name { get; set; }
+        //public Nullable<byte> Alive { get; set; }
 
         [NotMapped]
-        public Weapon Monster { get; set; }
-
-
+        public virtual Weapon Weapon1 { get; set; }
 
 
     }
+
 }
+

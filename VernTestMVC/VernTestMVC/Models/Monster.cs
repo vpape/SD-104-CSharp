@@ -11,7 +11,8 @@ namespace VernTestMVC.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public partial class Monster
     {
         public int id { get; set; }
@@ -20,5 +21,10 @@ namespace VernTestMVC.Models
         public Nullable<int> AttackPower { get; set; }
         public string Name { get; set; }
         public Nullable<byte> Alive { get; set; }
+        public Nullable<int> WeaponId { get; set; }
+        public virtual Weapon Weapon { get; set; }
+
     }
+    
+    
 }

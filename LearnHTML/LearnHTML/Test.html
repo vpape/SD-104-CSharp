@@ -1,0 +1,95 @@
+﻿
+<html>
+<head>
+    <title>This the title of HTML DOCUMENT</title>
+    <style>
+        p {
+            font-size: 30px;
+            font-family: Verdana;
+        }
+
+        body {
+            font-family: Tahoma;
+            font-size: 30px;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        #student {
+            background-color: green;
+        }
+    </style>
+
+    <script>
+
+
+        function dostuff1() {
+            var student = document.getElementById("student3")
+            //alert(student3.title);
+            //alert(student3.innerHTML);
+            //student3.innerHTML = "something else";
+            //student3.innerHTML
+
+            student.innerHTML = '<object'
+        }
+    </script>
+
+    <script>
+
+
+        function dostuff2() {
+            for (var i = 0; i < 10; i++)
+            {
+                            
+            var body = document.body
+            var div1 = document.createElement("div");
+            div1.innerHTML = "Hello World";
+            div1.className = "blue";
+
+            body.appendChild(div1)
+            }
+
+            function dostuff3() {
+                var inv = document.getElementById(invisible);
+                if (inv.style.display == "none") {
+                    inv.style.display = "block";
+                } else {
+                    inv.style.display = "none";
+                }
+                
+        }
+
+    </script>
+
+</head>
+<body onload="dostuff();">
+
+    <div id="student1" class="red">this text is in the div1</div>
+    <p style="font-family: Stencil">This is a paragraph1</p>
+    <p>This is a different paragraph1</p>
+
+
+    <div id="student2" class="cell">this text is in the div2</div>
+    <p class="blue">This is a paragraph2</p>
+    <p>This is a different paragraph2</p>
+
+    <div id="student3" title="something here">this text is in the div3 using JS</div>
+    <p>This is a paragraph3 using JS</p>
+    <p>This is a different paragraph3 using JS</p>
+
+
+    <div id="invisible" style="display: none">there is <p> some stuff in here</p> but you can't see it</div>
+    <button onclick="dostuff3()"> Toggle</button>
+
+
+
+    <button onclick="dostuff2()"> do something</button>
+
+</body>
+</html>

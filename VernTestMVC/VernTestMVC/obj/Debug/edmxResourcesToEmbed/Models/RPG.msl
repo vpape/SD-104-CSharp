@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Heroes">
       <EntityTypeMapping TypeName="RPGGameModel.Hero">
         <MappingFragment StoreEntitySet="Hero">
+          <ScalarProperty Name="WeaponId" ColumnName="WeaponId" />
           <ScalarProperty Name="Alive" ColumnName="Alive" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="Health" ColumnName="Health" />
@@ -17,9 +18,23 @@
     <EntitySetMapping Name="Weapons">
       <EntityTypeMapping TypeName="RPGGameModel.Weapon">
         <MappingFragment StoreEntitySet="Weapons">
+          <ScalarProperty Name="AttackModifier" ColumnName="AttackModifier" />
           <ScalarProperty Name="Hands" ColumnName="Hands" />
           <ScalarProperty Name="AttackValue" ColumnName="AttackValue" />
           <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Monsters">
+      <EntityTypeMapping TypeName="RPGGameModel.Monster">
+        <MappingFragment StoreEntitySet="Monster">
+          <ScalarProperty Name="WeaponId" ColumnName="WeaponId" />
+          <ScalarProperty Name="Alive" ColumnName="Alive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="AttackPower" ColumnName="AttackPower" />
+          <ScalarProperty Name="Lvl" ColumnName="Lvl" />
+          <ScalarProperty Name="Health" ColumnName="Health" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>

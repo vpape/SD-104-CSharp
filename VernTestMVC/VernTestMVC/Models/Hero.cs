@@ -21,5 +21,8 @@ namespace VernTestMVC.Models
         public Nullable<int> CurrentExp { get; set; }
         public string Name { get; set; }
         public Nullable<byte> Alive { get; set; }
+        public Nullable<int> WeaponId { get; set; }
+    
+        public virtual Weapon Weapon { get; set; }
     }
 }

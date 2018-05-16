@@ -16,6 +16,7 @@
           <Property Name="CurrentExp" Type="int" />
           <Property Name="Name" Type="varchar" MaxLength="250" />
           <Property Name="Alive" Type="tinyint" />
+          <Property Name="WeaponId" Type="int" />
         </EntityType>
         <EntityType Name="Monster">
           <Key>
@@ -27,6 +28,7 @@
           <Property Name="AttackPower" Type="int" />
           <Property Name="Name" Type="varchar" MaxLength="250" />
           <Property Name="Alive" Type="tinyint" />
+          <Property Name="WeaponId" Type="int" />
         </EntityType>
         <EntityType Name="Weapons">
           <Key>
@@ -36,11 +38,44 @@
           <Property Name="Name" Type="varchar" MaxLength="250" />
           <Property Name="AttackValue" Type="int" />
           <Property Name="Hands" Type="tinyint" />
+          <Property Name="AttackModifier" Type="int" />
         </EntityType>
+        <Association Name="FK_Hero_Weapons">
+          <End Role="Weapons" Type="Self.Weapons" Multiplicity="0..1" />
+          <End Role="Hero" Type="Self.Hero" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Weapons">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Hero">
+              <PropertyRef Name="WeaponId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Monster_Weapons">
+          <End Role="Weapons" Type="Self.Weapons" Multiplicity="0..1" />
+          <End Role="Monster" Type="Self.Monster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Weapons">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Monster">
+              <PropertyRef Name="WeaponId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="RPGGameModelStoreContainer">
           <EntitySet Name="Hero" EntityType="Self.Hero" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Monster" EntityType="Self.Monster" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Weapons" EntityType="Self.Weapons" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Hero_Weapons" Association="Self.FK_Hero_Weapons">
+            <End Role="Weapons" EntitySet="Weapons" />
+            <End Role="Hero" EntitySet="Hero" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Monster_Weapons" Association="Self.FK_Monster_Weapons">
+            <End Role="Weapons" EntitySet="Weapons" />
+            <End Role="Monster" EntitySet="Monster" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -57,11 +92,21 @@
           <Property Name="CurrentExp" Type="Int32" />
           <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="Alive" Type="Byte" />
+          <Property Name="WeaponId" Type="Int32" />
+          <NavigationProperty Name="Weapon" Relationship="RPGGameModel.FK_Hero_Weapons" FromRole="Hero" ToRole="Weapon" />
         </EntityType>
         <EntityContainer Name="RPGGameEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Heroes" EntityType="Self.Hero" />
           <EntitySet Name="Weapons" EntityType="RPGGameModel.Weapon" />
           <EntitySet Name="Monsters" EntityType="RPGGameModel.Monster" />
+          <AssociationSet Name="FK_Hero_Weapons" Association="RPGGameModel.FK_Hero_Weapons">
+            <End Role="Weapon" EntitySet="Weapons" />
+            <End Role="Hero" EntitySet="Heroes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Monster_Weapons" Association="RPGGameModel.FK_Monster_Weapons">
+            <End Role="Weapon" EntitySet="Weapons" />
+            <End Role="Monster" EntitySet="Monsters" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Weapon">
           <Key>
@@ -71,6 +116,9 @@
           <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="AttackValue" Type="Int32" />
           <Property Name="Hands" Type="Byte" />
+          <Property Name="AttackModifier" Type="Int32" />
+          <NavigationProperty Name="Heroes" Relationship="RPGGameModel.FK_Hero_Weapons" FromRole="Weapon" ToRole="Hero" />
+          <NavigationProperty Name="Monsters" Relationship="RPGGameModel.FK_Monster_Weapons" FromRole="Weapon" ToRole="Monster" />
         </EntityType>
         <EntityType Name="Monster">
           <Key>
@@ -82,7 +130,33 @@
           <Property Name="AttackPower" Type="Int32" />
           <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="Alive" Type="Byte" />
+          <Property Name="WeaponId" Type="Int32" />
+          <NavigationProperty Name="Weapon" Relationship="RPGGameModel.FK_Monster_Weapons" FromRole="Monster" ToRole="Weapon" />
         </EntityType>
+        <Association Name="FK_Hero_Weapons">
+          <End Type="RPGGameModel.Weapon" Role="Weapon" Multiplicity="0..1" />
+          <End Type="RPGGameModel.Hero" Role="Hero" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Weapon">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Hero">
+              <PropertyRef Name="WeaponId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Monster_Weapons">
+          <End Type="RPGGameModel.Weapon" Role="Weapon" Multiplicity="0..1" />
+          <End Type="RPGGameModel.Monster" Role="Monster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Weapon">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Monster">
+              <PropertyRef Name="WeaponId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -92,6 +166,7 @@
           <EntitySetMapping Name="Heroes">
             <EntityTypeMapping TypeName="RPGGameModel.Hero">
               <MappingFragment StoreEntitySet="Hero">
+                <ScalarProperty Name="WeaponId" ColumnName="WeaponId" />
                 <ScalarProperty Name="Alive" ColumnName="Alive" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="Health" ColumnName="Health" />
@@ -105,6 +180,7 @@
           <EntitySetMapping Name="Weapons">
             <EntityTypeMapping TypeName="RPGGameModel.Weapon">
               <MappingFragment StoreEntitySet="Weapons">
+                <ScalarProperty Name="AttackModifier" ColumnName="AttackModifier" />
                 <ScalarProperty Name="Hands" ColumnName="Hands" />
                 <ScalarProperty Name="AttackValue" ColumnName="AttackValue" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -115,6 +191,7 @@
           <EntitySetMapping Name="Monsters">
             <EntityTypeMapping TypeName="RPGGameModel.Monster">
               <MappingFragment StoreEntitySet="Monster">
+                <ScalarProperty Name="WeaponId" ColumnName="WeaponId" />
                 <ScalarProperty Name="Alive" ColumnName="Alive" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="AttackPower" ColumnName="AttackPower" />

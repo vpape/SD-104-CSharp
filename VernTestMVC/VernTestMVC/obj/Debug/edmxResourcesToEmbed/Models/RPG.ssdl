@@ -11,9 +11,20 @@
     <Property Name="CurrentExp" Type="int" />
     <Property Name="Name" Type="varchar" MaxLength="250" />
     <Property Name="Alive" Type="tinyint" />
+    <Property Name="WeaponId" Type="int" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'RPGGame.dbo.Weapons' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Monster">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Health" Type="int" />
+    <Property Name="Lvl" Type="int" />
+    <Property Name="AttackPower" Type="int" />
+    <Property Name="Name" Type="varchar" MaxLength="250" />
+    <Property Name="Alive" Type="tinyint" />
+    <Property Name="WeaponId" Type="int" />
+  </EntityType>
   <EntityType Name="Weapons">
     <Key>
       <PropertyRef Name="id" />
@@ -22,16 +33,43 @@ warning 6002: The table/view 'RPGGame.dbo.Weapons' does not have a primary key d
     <Property Name="Name" Type="varchar" MaxLength="250" />
     <Property Name="AttackValue" Type="int" />
     <Property Name="Hands" Type="tinyint" />
+    <Property Name="AttackModifier" Type="int" />
   </EntityType>
+  <Association Name="FK_Hero_Weapons">
+    <End Role="Weapons" Type="Self.Weapons" Multiplicity="0..1" />
+    <End Role="Hero" Type="Self.Hero" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Weapons">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Hero">
+        <PropertyRef Name="WeaponId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Monster_Weapons">
+    <End Role="Weapons" Type="Self.Weapons" Multiplicity="0..1" />
+    <End Role="Monster" Type="Self.Monster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Weapons">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Monster">
+        <PropertyRef Name="WeaponId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="RPGGameModelStoreContainer">
     <EntitySet Name="Hero" EntityType="Self.Hero" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Weapons" EntityType="Self.Weapons" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [Weapons].[id] AS [id], 
-    [Weapons].[Name] AS [Name], 
-    [Weapons].[AttackValue] AS [AttackValue], 
-    [Weapons].[Hands] AS [Hands]
-    FROM [dbo].[Weapons] AS [Weapons]</DefiningQuery>
-    </EntitySet>
+    <EntitySet Name="Monster" EntityType="Self.Monster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Weapons" EntityType="Self.Weapons" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Hero_Weapons" Association="Self.FK_Hero_Weapons">
+      <End Role="Weapons" EntitySet="Weapons" />
+      <End Role="Hero" EntitySet="Hero" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Monster_Weapons" Association="Self.FK_Monster_Weapons">
+      <End Role="Weapons" EntitySet="Weapons" />
+      <End Role="Monster" EntitySet="Monster" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

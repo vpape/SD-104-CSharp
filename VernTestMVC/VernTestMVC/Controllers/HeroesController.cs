@@ -27,7 +27,7 @@ namespace VernTestMVC.Controllers
                               h.Name,
                               h.Alive
                           });
-            return Json(new { data = result },  JsonRequestBehavior.AllowGet);
+            return Json(new { data = result }, JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult LevelUp(int id)
@@ -43,7 +43,7 @@ namespace VernTestMVC.Controllers
 
             h.LevelUp();
             db.SaveChanges();
-            
+
 
             return Json(new { data = "success" }, JsonRequestBehavior.AllowGet);
 
@@ -124,30 +124,15 @@ namespace VernTestMVC.Controllers
             return View(hero);
         }
 
-        // GET: Heroes/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Hero hero = db.Heroes.Find(id);
-            if (hero == null)
-            {
-                return HttpNotFound();
-            }
-            return View(hero);
-        }
-
         // POST: Heroes/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        
+        public JsonResult Delete(int id)
         {
             Hero hero = db.Heroes.Find(id);
             db.Heroes.Remove(hero);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            var response = (new { response = "success" });
+            return Json(response, JsonRequestBehavior.AllowGet);
         }
 
         protected override void Dispose(bool disposing)

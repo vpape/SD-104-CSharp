@@ -1,6 +1,6 @@
 ﻿
 <hr />
-Enter Name: <input type="text" name=" HeroName" id=" HeroName" /><br/>
+Enter Name: <input type="text" name="HeroName" id="HeroName" /><br/>
 
 <p>
 
@@ -8,28 +8,36 @@ Enter Name: <input type="text" name=" HeroName" id=" HeroName" /><br/>
 
 <button onclick ="StartGame();">Start Game</button>
 <hr />
-<table>
-    <tr>
-        <td>Name:</td>                  
-        <td id="Name"></td>
-    </tr>
-    <tr>
-        <td>Health:</td>
-        <td id="Health"></td>
-    </tr>
-    <tr>
-        <td>Lvl:</td>
-        <td id="Lvl"></td>
-    </tr>
-    <tr>
-        <td>Attack Power:</td>
-        <td id="AttackPower"></td>
-    </tr>
-    <tr>
-        <td>Current Exp:</td>
-        <td id="CurrentExp"></td>
-    </tr>
-</table>
+
+    <table width="300" cellpadding="5" cellspacing="5" border="1">
+        <tr>
+            <td>Name:</td>
+            <td id="Name"></td>
+        </tr>
+        <tr>
+            <td>Health:</td>
+            <td id="Health"></td>
+        </tr>
+        <tr>
+            <td>Lvl:</td>
+            <td id="Lvl"></td>
+        </tr>
+        <tr>
+            <td>Attack Power:</td>
+            <td id="AttackPower"></td>
+        </tr>
+        <tr>
+            <td>Current Exp:</td>
+            <td id="CurrentExp"></td>
+        </tr>
+        <tr>
+            <td>Weapon:</td>
+            <td id="Weapon"></td>
+        </tr>
+    </table>
+<hr />
+<button onclick="Attack();">Attack</button>
+
 <script>
 
     function SetHeroValues(data) {
@@ -38,21 +46,31 @@ Enter Name: <input type="text" name=" HeroName" id=" HeroName" /><br/>
         document.getElementById("Lvl").innerHTML = data.Lvl;
         document.getElementById("AttackPower").innerHTML = data.AttackPower;
         document.getElementById("CurrentExp").innerHTML = data.CurrentExp;
+        document.getElementById("Weapon").innerHTML = data.Weapon;
+        document.getElementById("Attack").innerHTML = data.Attack;
     }
 
     function LevelUp() {
-        HeroName = document.getElementById("Name").innerHTML;        
+       HeroName = document.getElementById("Name");        
 
         postData('LevelUp', { Name: HeroName.value })
-            .then(data => alert(data))
+            .then(data => SetHeroValues(data))
+            .catch(error => console.error(error))
+    }
+
+    function Attack() {
+       Attack = document.getElementById("Attack");
+
+        postData('Attack', { Name: Attack.value, AttackValue,  AttackPower,  AttackModifier, MAttackValue, MAttackPower,  MAttackModifier })
+            .then(data => SetHeroValues(data))
             .catch(error => console.error(error))
     }
 
     function StartGame(){
-        HeroName = document.getElementById("HeroName");       
+       HeroName = document.getElementById("HeroName");       
 
-        postData('Game\StartGame', { Name: HeroName })
-            .then(data => alert(data))
+        postData('Game/GameStart', { Name: HeroName.value })
+            .then(data => SetHeroValues(data))
             .catch(error => console.error(error))
 
         function postData(url, data) {

@@ -29,29 +29,76 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Health)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Lvl)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AttackPower)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CurrentExp)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Health)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lvl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AttackPower)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentExp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                <input type="checkbox" id="@item.id"  />
+            </td>
+        </tr>
+    }        
 
 </table>
+    <input type="submit" onclick="DeleteSelected()" value="Delete" />
+    <script>
+
+        function DeleteSelected()
+        {
+            var inputs = document.getElementsByTagName("input");
+            for (var i = 0; i < inputs.length; i++)
+            {
+                if (inputs[i].type == "checkbox")
+                {
+                    if (inputs[i].checked)
+                    {
+                        var id = inputs[i].id;
+                        postData('Heroes/Delete', { id: id })
+                            .then(location.reload())
+                            .catch(error => console.error(error))
+                    }
+
+                }
+            }
+        }
+ 
+
+        function postData(url, data) {
+            // Default options are marked with *
+            return fetch(url, {
+                body: JSON.stringify(data), // must match 'Content-Type' header
+                cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+                credentials: 'same-origin', // include, same-origin, *omit
+                headers: {
+                    'user-agent': 'Mozilla/4.0 MDN Example',
+                    'content-type': 'application/json'
+                },
+                method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                mode: 'cors', // no-cors, cors, *same-origin
+                redirect: 'follow', // manual, *follow, error
+                referrer: 'no-referrer', // *client, no-referrer
+            })
+                .then(response => response.json()) // parses response to JSON
+        }
+
+    </script>
+
+
+    
+

@@ -11,13 +11,14 @@ namespace VernTestMVC.Models
         public void LevelUp()
         {
             this.Lvl += 1;
-            this.Health += 20;
+            this.Health += 2;
+            this.AttackPower += 1;
+            this.CurrentExp = 0;
 
         }
 
         [NotMapped]
-        public Weapon HeroWeapon { get; set; }
-
-       
+        public virtual Weapon Weapon1 { get; set; }
     }
+        
 }

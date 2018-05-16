@@ -6,8 +6,10 @@
     <edmx:Diagrams>
       <Diagram DiagramId="c71bdaf7e4f0460ab01c8b65307e829f" Name="Diagram1">
         <EntityTypeShape EntityType="RPGGameModel.Hero" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="RPGGameModel.Weapon" Width="1.5" PointX="3.375" PointY="0.75" />
-        <EntityTypeShape EntityType="RPGGameModel.Monster" Width="1.5" PointX="6.625" PointY="1.125" />
+        <EntityTypeShape EntityType="RPGGameModel.Weapon" Width="1.5" PointX="4.625" PointY="1" />
+        <EntityTypeShape EntityType="RPGGameModel.Monster" Width="1.5" PointX="8.375" PointY="1" />
+        <AssociationConnector Association="RPGGameModel.FK_Hero_Weapons" />
+        <AssociationConnector Association="RPGGameModel.FK_Monster_Weapons" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

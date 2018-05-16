@@ -151,10 +151,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\GameController.cs" />
+    <Compile Include="Controllers\HeroesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MonsterController.cs" />
+    <Compile Include="Controllers\MonstersController.cs" />
     <Compile Include="ExtendedClasses\Hero.cs" />
     <Compile Include="ExtendedClasses\Monster.cs" />
+    <Compile Include="ExtendedClasses\Weapon.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -183,7 +185,6 @@
       <DependentUpon>RPG.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Controllers\HeroesController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -245,6 +246,17 @@
     <Content Include="Views\Heroes\Edit.cshtml" />
     <Content Include="Views\Heroes\Index.cshtml" />
     <Content Include="Views\Game\Index.cshtml" />
+    <Content Include="Views\Weapons\Create.cshtml" />
+    <Content Include="Views\Weapons\Delete.cshtml" />
+    <Content Include="Views\Weapons\Details.cshtml" />
+    <Content Include="Views\Weapons\Edit.cshtml" />
+    <Content Include="Views\Weapons\Index.cshtml" />
+    <Content Include="Views\Game\NewGame.cshtml" />
+    <Content Include="Views\Monsters\Create.cshtml" />
+    <Content Include="Views\Monsters\Delete.cshtml" />
+    <Content Include="Views\Monsters\Details.cshtml" />
+    <Content Include="Views\Monsters\Edit.cshtml" />
+    <Content Include="Views\Monsters\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

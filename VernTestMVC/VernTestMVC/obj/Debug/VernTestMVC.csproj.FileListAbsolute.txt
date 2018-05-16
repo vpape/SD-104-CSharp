@@ -51,6 +51,8 @@ C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\bin\roslyn\v
 C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\bin\roslyn\VBCSCompiler.exe
 C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\bin\Antlr3.Runtime.dll
+C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\bin\EntityFramework.dll
+C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\bin\EntityFramework.SqlServer.dll
 C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\bin\Microsoft.AI.Agent.Intercept.dll
 C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\bin\Microsoft.AI.DependencyCollector.dll
 C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -69,6 +71,8 @@ C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\bin\System.W
 C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\bin\System.Web.WebPages.dll
 C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\bin\System.Web.WebPages.Razor.dll
 C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\bin\WebGrease.dll
+C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\bin\EntityFramework.xml
+C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\bin\EntityFramework.SqlServer.xml
 C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\bin\System.Web.Helpers.xml
 C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\bin\System.Web.Mvc.xml
@@ -88,7 +92,4 @@ C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\obj\Debug\Ve
 C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\obj\Debug\VernTestMVC.csproj.CopyComplete
 C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\obj\Debug\VernTestMVC.dll
 C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\obj\Debug\VernTestMVC.pdb
-C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\bin\EntityFramework.dll
-C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\bin\EntityFramework.SqlServer.dll
-C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\bin\EntityFramework.xml
-C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\bin\EntityFramework.SqlServer.xml
+C:\Users\Student\source\repos\SD-104-CSharp\VernTestMVC\VernTestMVC\obj\Debug\VernTestMVC.csprojResolveAssemblyReference.cache

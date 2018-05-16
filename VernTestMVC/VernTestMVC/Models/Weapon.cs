@@ -14,9 +14,22 @@ namespace VernTestMVC.Models
     
     public partial class Weapon
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Weapon()
+        {
+            this.Heroes = new HashSet<Hero>();
+            this.Monsters = new HashSet<Monster>();
+        }
+    
         public int id { get; set; }
         public string Name { get; set; }
         public Nullable<int> AttackValue { get; set; }
         public Nullable<byte> Hands { get; set; }
+        public Nullable<int> AttackModifier { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Hero> Heroes { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Monster> Monsters { get; set; }
     }
 }
