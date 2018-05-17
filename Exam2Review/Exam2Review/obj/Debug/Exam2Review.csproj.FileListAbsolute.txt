@@ -1,0 +1,6 @@
+C:\Users\Student\source\repos\SD-104-CSharp\Exam2Review\Exam2Review\obj\Debug\Exam2Review.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\SD-104-CSharp\Exam2Review\Exam2Review\bin\Debug\Exam2Review.exe.config
+C:\Users\Student\source\repos\SD-104-CSharp\Exam2Review\Exam2Review\bin\Debug\Exam2Review.exe
+C:\Users\Student\source\repos\SD-104-CSharp\Exam2Review\Exam2Review\bin\Debug\Exam2Review.pdb
+C:\Users\Student\source\repos\SD-104-CSharp\Exam2Review\Exam2Review\obj\Debug\Exam2Review.exe
+C:\Users\Student\source\repos\SD-104-CSharp\Exam2Review\Exam2Review\obj\Debug\Exam2Review.pdb
